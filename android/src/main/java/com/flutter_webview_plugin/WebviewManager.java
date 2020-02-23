@@ -347,7 +347,7 @@ class WebviewManager {
         }
     }
     
-    private void getAllCookies(MethodCall call, final MethodChannel.Result result){
+    void getAllCookies(MethodCall call, final MethodChannel.Result result){
         String url = call.argument("url");
         CookieManager cookieManager = CookieManager.getInstance();
         String cookieStr = cookieManager.getCookie(url);
