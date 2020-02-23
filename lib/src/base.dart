@@ -308,6 +308,12 @@ class FlutterWebviewPlugin {
 
     return cookies;
   }
+  
+  /// Get AllCookies
+  Future<String> getAllCookies(String url) async {
+    final res = await _channel.invokeMethod('getAllCookies', {'url': url});
+    return res;
+  }
 
   /// resize webview
   Future<Null> resize(Rect rect) async {
